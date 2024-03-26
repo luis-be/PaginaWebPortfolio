@@ -1,0 +1,57 @@
+/*Resetear Estilo*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Estilo General*/
+
+body {
+  background-color: #232347;
+  color: #fff;
+  line-height: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Estilo del Header*/
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  box-sizing: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav-list {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.header-nav-list li a {
+  font-size: 1.1rem;
+}
+
+.logo-container {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  border-radius: 50%;
+}
