@@ -1,4 +1,4 @@
-/*Resetear Estilo*/
+/*-------Resetear Estilo-------*/
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-/*Estilo General*/
+/*-------Estilo General-------*/
 
 body {
   background-color: #232347;
@@ -27,14 +27,18 @@ a {
   text-decoration: none;
 }
 
-/*Estilo del Header*/
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+/*-------Estilo del Header-------*/
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 24px;
-  box-sizing: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-nav-list {
@@ -45,6 +49,25 @@ a {
 
 .header-nav-list li a {
   font-size: 1.1rem;
+  position: relative;
+}
+
+/*-------efecto de letra-------*/
+.header-nav-list li a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #dcdcb8;
+  left: 0;
+  position: absolute;
+  bottom: -2px;
+  transition: 0.2s;
+}
+
+.header-nav-list li a:hover,
+.header-nav-list li a:hover::after {
+  width: 100%;
+  color: #cdcde0;
 }
 
 .logo-container {
@@ -54,4 +77,56 @@ a {
 
 .logo {
   border-radius: 50%;
+  background-color: #7979d5;
+}
+
+/*-------Estilo sección "Hero"-------*/
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 60%;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 16px;
+  margin-bottom: 16px;
+}
+
+.main-text {
+  display: inline-block;
+}
+
+.main-text span {
+  color: #10e79c;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.hero-img-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+
+.hero-img {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  object-fit: scale-down;
 }
