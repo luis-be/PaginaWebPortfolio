@@ -8,10 +8,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/6edd49f7c0.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
+    <!------------------------Header----------------------->
     <header class="header-container">
       <div class="logo-container">
         <img
@@ -34,7 +39,8 @@
       </div>
     </header>
     <main>
-      <section class="hero-section">
+      <!------------------------Hero----------------------->
+      <section class="hero-section container">
         <div class="hero-text">
           <h1>
             Hola mi nombre es
@@ -42,7 +48,8 @@
           </h1>
           <p class="hero-description">
             Soy Ingeniero Informático y estoy creando esta página web para
-            guardar mi progreso y demostrar mi conocimiento
+            guardar mi progreso, demostrar mi conocimiento y ofrecer mis
+            servicios.
           </p>
         </div>
         <div class="hero-img-container">
@@ -51,6 +58,66 @@
             src="./images/fotoPerfil.jpg"
             alt="Foto de perfil de Casiano"
           />
+        </div>
+      </section>
+      <!------------------------Servicios----------------------->
+      <section class="service-section container">
+        <div class="section-title">
+          <h2>MIS SERVICIOS</h2>
+        </div>
+        <div class="services">
+          <div>
+            <i class="fa-solid fa-file-code"></i>
+            <h3>Programación Frontend</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              explicabo.
+            </p>
+            <a href="">Más...</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Programación Backend</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              explicabo.
+            </p>
+            <a href="">Más...</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Soporte Técnico</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              explicabo.
+            </p>
+            <a href="">Más...</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-language"></i>
+            <h3>Traducción</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              explicabo.
+            </p>
+            <a href="">Más...</a>
+          </div>
+        </div>
+      </section>
+      <!------------------------Trabajos----------------------->
+      <section class="work-section container">
+        <div class="section-title">
+          <h2>MIS TRABAJOS</h2>
+        </div>
+        <div class="portfolios">
+          <div class="portfolio">
+            <img
+              class="artis"
+              src="./images/artis.png"
+              alt="Imagen del proyecto artis que desarrollé en glide"
+              width="4"
+            />
+          </div>
         </div>
       </section>
     </main>
