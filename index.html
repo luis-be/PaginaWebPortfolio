@@ -12,6 +12,7 @@
       src="https://kit.fontawesome.com/6edd49f7c0.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Soy Casiano - ¡Hola!</title>
   </head>
@@ -28,13 +29,13 @@
       <div>
         <nav class="header-nav">
           <ul class="header-nav-list">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Sobre Mi</a></li>
-            <li><a href="">Servicios</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Contactos</a></li>
-            <li><a href="">CV</a></li>
-            <i class="fa-solid fa-circle-xmark"></i>
+            <li class="list-item"><a href="#">Inicio</a></li>
+            <li class="list-item"><a href="#services">Servicios</a></li>
+            <li class="list-item"><a href="#work">Trabajos</a></li>
+             <!--<li class="list-item"><a href="#">CV</a></li>-->
+            <li class="list-item"><a href="#contact">Contacto</a></li>
+            <li class="list-item"><a href="#hero">Sobre Mi</a></li>
+            <i class="fa-solid fa-circle-xmark list-item"></i>
           </ul>
           <i class="fa-solid fa-bars"></i>
         </nav>
@@ -42,7 +43,7 @@
     </header>
     <main>
       <!------------------------Hero----------------------->
-      <section class="hero-section container">
+      <section class="hero-section container" id="hero">
         <div class="hero-text">
           <h1>
             Hola mi nombre es
@@ -63,7 +64,7 @@
         </div>
       </section>
       <!------------------------Servicios----------------------->
-      <section class="container service-section">
+      <section class="container service-section" id="services">
         <div class="section-title">
           <h2>MIS SERVICIOS</h2>
         </div>
@@ -107,7 +108,7 @@
         </div>
       </section>
       <!------------------------Trabajos----------------------->
-      <section class="container work-section">
+      <section class="container work-section" id="work">
         <div class="portfolio-container">
           <div class="section-title">
             <h2>MIS TRABAJOS</h2>
@@ -183,7 +184,7 @@
         </div>
       </section>
       <!------------------------Contacto----------------------->
-      <section class="container contact-section">
+      <section class="container contact-section" id="contact">
         <h2 class="section-title">Contacto</h2>
         <div class="contact-container">
           <form action="">

@@ -39,12 +39,15 @@ a {
 
 .header-container {
   display: flex;
+  margin-top: -10px;
   justify-content: space-between;
   align-items: center;
   padding: 8px 24px;
+  background-color: #232347;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #4d4d9c;
   width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
 
 .header-nav-list {
@@ -101,17 +104,32 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px; /* Ajusta el padding-top para evitar que el contenido esté detrás del header */
 }
 
 .hero-text {
   flex: 1;
-  max-width: 80%;
+  max-width: 45%; /* Ajustado para no ocupar todo el espacio disponible */
+  aspect-ratio: 1; /* Hace que el contenedor sea cuadrado */
+  padding: 1rem; /* Añade espacio interno alrededor del texto */
+  display: flex; /* Utiliza flexbox para alinear el contenido dentro del contenedor cuadrado */
+  flex-direction: column; /* Alinea el contenido en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  text-align: left; /* Alinea el texto al centro */
+  margin-left: 8rem;
 }
 
 .hero-text h1 {
   font-size: 2rem;
   letter-spacing: 1px;
   margin-bottom: 16px;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  border-color: red;
 }
 
 .main-text {
@@ -124,25 +142,23 @@ a {
   font-size: larger;
 }
 
-.hero-description {
-  font-size: 1.3rem;
-  line-height: 1.7;
-}
-
 .hero-img-container {
-  flex: 2;
+  flex: 1; /* Cambiado a 1 para que no ocupe demasiado espacio */
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1;
+  width: 100%; /* Asegura que el contenedor no se expanda más allá de su contenedor padre */
+  max-width: 500px; /* Limita el tamaño máximo del contenedor */
+  aspect-ratio: 1; /* Mantiene una proporción cuadrada */
+  padding: 1rem; /* Opcional: Añade un poco de padding para espacio interno */
+  box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el tamaño total del contenedor */
 }
 
 .hero-img {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
-
 /*-------Estilo sección "Servicios"-------*/
 
 .services {
@@ -374,6 +390,8 @@ textarea {
 /*-------Estilo sección "Footer"-------*/
 
 footer {
+  left: 0;
+  bottom: 0;
   background-color: #4d4d9c;
   padding: 12px;
   font-size: 0.8rem;
@@ -408,5 +426,91 @@ footer p::first-letter {
     align-items: center;
     background-color: #4d4d9c;
     position: fixed;
+    right: -16rem;
+    height: 100vh;
+    width: 16rem;
+    z-index: 1;
+    padding-top: 60px;
+  }
+
+  .header-nav-list .fa-solid {
+    position: absolute;
+    top: 10px;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    order: -1;
+  }
+
+  .hero-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  .hero-text {
+    text-align: center;
+    max-width: 1000%;
+    margin-left: -10px;
+  }
+
+  .service-section {
+    text-align: center;
+    margin-top: 8rem;
+  }
+
+  .contact-container {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  form {
+    margin: 1rem 1.5rem 3rem;
+    max-width: 80%;
+  }
+
+  .form-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input[type="text"] {
+    width: 100%;
+  }
+
+  footer {
+    width: 110%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    gap: 1.4rem;
+  }
+
+  .aside-contact {
+    bottom: 0;
+    width: auto;
+    padding: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
